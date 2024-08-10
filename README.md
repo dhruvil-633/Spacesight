@@ -1,5 +1,3 @@
-
-
 # SpaceSight
 
 **SpaceSight** is a project focused on predicting the collision of satellites or debris with satellites using logistic regression. The goal is to provide a reliable and efficient system to anticipate and mitigate potential space collisions.
@@ -49,11 +47,18 @@
    ```bash
    pip install -r requirements.txt
    ```
-4. **Run the Flask server:**
+4. **Run the Model:**
    ```bash
-   flask run
+   python Model.py
    ```
-5. **Access the application:** Open your web browser and go to `http://localhost:5000`.
+5. **Run the Flask server:**
+   ```bash
+   python app.py
+   ```
+6. **Run the Frontend (HTML):**
+   ```bash
+   Open the HTML file in a web browser
+   ```
 
 ## Future Plans
 
@@ -63,12 +68,11 @@
 
 ## Contributors
 
-- [Dhruvil Patel](https://github.com/dhruvil) - Project Lead, Machine Learning Engineer
-- [Bhavik Jobanputra](https://github.com/contributor1) - Frontend Developer
-- [Vedant Bhayani](https://github.com/contributor2) - Backend Developer
-- [Manav Bachani](https://github.com/contributor2) - Frontend Developer
+- [Dhruvil Patel](https://github.com/dhruvil-633) / [LinkedIn](https://www.linkedin.com/in/dhruvil-patel-0a6b47282/) - Project Lead, Machine Learning Engineer
+- [Bhavik Jobanputra](https://github.com/BhavikJobanputra) / [LinkedIn](https://www.linkedin.com/in/bhavik-jobanputra-505563289/) - Frontend Developer
+- [Vedant Bhayani](https://github.com/VedantBhayani) / [LinkedIn](https://www.linkedin.com/in/vedant-bhayani-391122283/) - Backend Developer
+- [Manav Bachani](https://github.com/ManavBachani) / [LinkedIn](https://www.linkedin.com/in/manav-bachani-3495bb299/) - Frontend Developer
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
