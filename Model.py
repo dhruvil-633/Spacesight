@@ -40,6 +40,11 @@ def train_model(X_train, y_train):
     model = GridSearchCV(LogisticRegression(class_weight='balanced', max_iter=10000), param_grid, cv=5, scoring='f1')
     model.fit(X_train_res, y_train_res)
 
+    # Save the trained model and scaler
+    import joblib
+    joblib.dump(model, 'logistic_regression_model.pkl')
+    joblib.dump(scaler, 'scaler.pkl')
+
     return model, scaler
 
 def evaluate_model(model, scaler, X_test, y_test):
@@ -58,12 +63,12 @@ def evaluate_model(model, scaler, X_test, y_test):
     print(f'F1 Score: {f1:.4f}')
     print(f'ROC AUC Score: {roc_auc:.4f}')
 
-    conf_matrix = confusion_matrix(y_test, y_pred)
-    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues')
-    plt.xlabel('Predicted')
-    plt.ylabel('Actual')
-    plt.title('Confusion Matrix')
-    plt.show()
+    # conf_matrix = confusion_matrix(y_test, y_pred)
+    # sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues')
+    # plt.xlabel('Predicted')
+    # plt.ylabel('Actual')
+    # plt.title('Confusion Matrix')
+    # plt.show()
 
 def predict_collision_user_input(model, scaler):
     try:
@@ -126,9 +131,9 @@ def main():
         submission.to_csv("submission.csv", index=False)
 
         # User input prediction
-        prediction = predict_collision_user_input(model, scaler)
-        if prediction is not None:
-            print(f"Collision Prediction: {prediction}")
+        # prediction = predict_collision_user_input(model, scaler)
+        # if prediction is not None:
+        #     print(f"Collision Prediction: {prediction}")
 
 if __name__ == "__main__":
     main()
