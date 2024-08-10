@@ -1,0 +1,100 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    display: none; /* Remove header for this design */
+}
+
+.flex-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    width: 400px;
+    text-align: center;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #aaa;
+}
+
+input[type="text"], input[type="password"] {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit-btn {
+    display: inline-block; /* Makes it behave like a button */
+    width: 100%; /* Full width of its container */
+    padding: 12px; /* Adds padding inside the button */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners */
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); /* Gradient background */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Removes underline from the link */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); /* Inverted gradient on hover */
+}
+
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #2ecc71;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

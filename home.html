@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>SPACESIGHT</h1>
+        <a href="index.html" class="header-btn">Sign out</a>
+    </header>
+    <div class="flex-container">
+        <div class="content-container">
+            <div class="form-container">
+                <form action="/action_page.php">
+                    <h2 style="text-align: center; font-size: 24px; color: #333;">Enter the Values</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="x-coordinate"><b>X Coordinate</b></label>
+                            <div class="line-input">
+                                <input type="text" id="x-coordinate" name="X Co-ordinate" placeholder=" ">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="y-coordinate"><b>Y Coordinate</b></label>
+                            <div class="line-input">
+                                <input type="text" id="y-coordinate" name="Y Co-ordinate" placeholder=" ">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="z-coordinate"><b>Z Coordinate</b></label>
+                            <div class="line-input">
+                                <input type="text" id="z-coordinate" name="Z Co-ordinate" placeholder=" ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="velocity-x"><b>Velocity in X Direction</b></label>
+                            <div class="line-input">
+                                <input type="text" id="velocity-x" name="Velocity in X direction" placeholder=" ">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="velocity-y"><b>Velocity in Y Direction</b></label>
+                            <div class="line-input">
+                                <input type="text" id="velocity-y" name="Velocity in Y direction" placeholder=" ">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="velocity-z"><b>Velocity in Z Direction</b></label>
+                            <div class="line-input">
+                                <input type="text" id="velocity-z" name="Velocity in Z direction" placeholder=" ">
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="predict-btn">Predict</a>
+
+                    <!-- Result Area -->
+                    <div class="result-area">
+                        <!-- Result text will be displayed here -->
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
