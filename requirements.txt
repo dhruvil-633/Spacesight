@@ -1,1 +1,1 @@
-NumPy Pandas matplotlib.pyplot seaborn Flask scikit-learn imblearn flask_cors joblib pickle csv 
+numPy pandas matplotlib seaborn Flask scikit-learn imblearn flask_cors joblib pickle csv 
