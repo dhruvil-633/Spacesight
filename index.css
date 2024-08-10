@@ -1,126 +1,177 @@
 /* General Styles */
-html {
-    scroll-behavior: smooth;
-}
-
-* {
+html, body {
+    background: url('image1.png') no-repeat center center fixed; /* Set background image */
+    background-size: cover; /* Cover the entire screen */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #faf8f8;
-    overflow-x: hidden;
     height: 100%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-/* Focus Ring Disable */
-body:not(.user-is-tabbing) button:focus,
-body:not(.user-is-tabbing) input:focus,
-body:not(.user-is-tabbing) select:focus,
-body:not(.user-is-tabbing) textarea:focus {
-    outline: none;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Header Styles */
-.header-container {
-    background-color: rgb(233, 222, 222);
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    background: #000761;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Changed to fixed for better consistency */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header stays on top */
 }
 
-.logo-text {
-    color: rgb(79, 79, 195);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 35px;
-    font-weight: 800;
+header h1 {
+    font-family: cursive;
+    color: white;
+    font-size: 32px;
+    margin: 0;
 }
 
-.user-profile {
-    height: 50px;
-    border-radius: 50%;
+.header-btn {
+    background: #2B84BF;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 70px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.header-btn:hover {
+    background: white;
+    color: #2B84BF;
+}
+
+/* Main Section Styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust for header height */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: 60px; /* Space for header */
 }
 
 /* Flex Container */
 .flex-container {
-    width: 100vw;
-    margin-top: 60px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 /* Content Container */
 .content-container {
-    width: 500px;
-    height: 350px;
+    width: 100%;
+    max-width: 600px; /* Adjusted for better layout */
+    text-align: center;
+    padding: 0 20px;
 }
 
-/* Form Container */
 /* Form Container */
 .form-container {
-    width: 500px;
-    height: 350px;
-    margin-top: 5px;
-    padding-top: 20px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #f5f3f3;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), /* Original shadow */
-                10px 10px 20px rgba(0, 0, 0, 0.15), /* Additional layer */
-                15px 15px 25px rgba(0, 0, 0, 0.1), /* Further depth */
-                20px 20px 30px rgba(0, 0, 0, 0.05); /* Subtle outer glow */
+    background: #000761;;
+    padding: 20px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Prevent overflow */
+    overflow: hidden;
 }
 
-
-/* Input Group */
-.input-group {
-    display: flex;
-    gap: 10px;
+/* Form Container Headings and Text */
+.form-container h2 {
+    font-size: 1.75rem; /* Increased font size for emphasis */
+    color: white;
+    margin-bottom: 20px;
 }
 
-/* Input Fields */
-.input-field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+.form-container p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
-input[type="number"] {
-    border: none;
-    border-bottom: 1px solid rgb(143, 143, 143);
-    background: none;
-    color: rgba(0, 0, 0, 0.555);
-    height: 35px;
-    width: 150px;
+/* Features Section */
+.features {
+    margin-top: 20px; /* Increased margin for separation */
 }
 
-/* Submit Button */
-.submit-btn {
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 2px 2px 7px #38d39f70;
-    background: #38d39f;
-    color: rgba(255, 255, 255, 0.8);
-    width: 80px;
-    transition: all 0.3s ease;
+.feature-item {
+    margin-bottom: 15px; /* Increased margin for better spacing */
 }
 
-.submit-btn:hover {
-    color: #fff;
-    box-shadow: none;
+.feature-item h3 {
+    font-size: 1.3rem; /* Increased font size for better readability */
+    color: white;
+    margin-bottom: 10px; /* Increased margin for better spacing */
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: white;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px; /* Increased padding for better appearance */
+    background: #2B84BF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size for better readability */
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #2B84BF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 0 15px; /* Adjusted for better spacing */
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem; /* Adjusted font size */
+    }
+
+    .form-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-btn {
+        font-size: 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .form-container h2 {
+        font-size: 1.25rem; /* Adjusted font size */
+    }
+
+    .form-container p {
+        font-size: 0.85rem; /* Adjusted font size */
+    }
+
+    .cta-button {
+        font-size: 14px; /* Adjusted font size */
+    }
 }
