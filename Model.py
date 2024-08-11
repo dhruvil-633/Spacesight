@@ -57,11 +57,15 @@ def evaluate_model(model, scaler, X_test, y_test):
     f1 = f1_score(y_test, y_pred)
     roc_auc = roc_auc_score(y_test, y_pred)
 
-    print(f'Accuracy: {accuracy:.4f}')
-    print(f'Precision: {precision:.4f}')
-    print(f'Recall: {recall:.4f}')
-    print(f'F1 Score: {f1:.4f}')
-    print(f'ROC AUC Score: {roc_auc:.4f}')
+    # print(f'Accuracy: {accuracy:.4f}')
+    # print(f'Precision: {precision:.4f}')
+    # print(f'Recall: {recall:.4f}')
+    # print(f'F1 Score: {f1:.4f}')
+    # print(f'ROC AUC Score: {roc_auc:.4f}')
+
+    print("The model is trained with all the data")
+    print("Now deploy the Flask server")
+    print("Then launch the web app to predict the collision")
 
     # conf_matrix = confusion_matrix(y_test, y_pred)
     # sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues')
