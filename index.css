@@ -1,177 +1,164 @@
-/* General Styles */
-html, body {
-    background: url('image1.png') no-repeat center center fixed; /* Set background image */
-    background-size: cover; /* Cover the entire screen */
+/* Base styles for large screens (default) */
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    overflow: hidden; /* Prevent scrolling */
-}
-
-/* Header Styles */
-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    background: #000761;
-    padding: 15px 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Changed to fixed for better consistency */
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Ensure the header stays on top */
-}
-
-header h1 {
-    font-family: cursive;
+    background-color: black;
     color: white;
-    font-size: 32px;
-    margin: 0;
+    font-family: 'Orbitron', sans-serif;
 }
 
-.header-btn {
-    background: #2B84BF;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 5px;
-    margin-right: 70px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background 0.3s;
+header {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: #ADD8E6;
+    font-size: 25px;
 }
 
-.header-btn:hover {
-    background: white;
-    color: #2B84BF;
-}
-
-/* Main Section Styles */
 main {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Adjust for header height */
-    padding: 20px;
-    box-sizing: border-box;
-    position: relative;
-    top: 60px; /* Space for header */
-}
-
-/* Flex Container */
-.flex-container {
-    width: 100%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+    margin: 0;
+    padding: 0;
 }
 
-/* Content Container */
-.content-container {
-    width: 100%;
-    max-width: 600px; /* Adjusted for better layout */
-    text-align: center;
-    padding: 0 20px;
+.doodle {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
 }
 
-/* Form Container */
-.form-container {
-    background: #000761;;
-    padding: 20px; /* Increased padding for better spacing */
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    max-height: 80vh; /* Prevent overflow */
-    overflow: hidden;
+img {
+    max-width: 55%;
+    height: auto;
+    display: block;
+    transform: none;
 }
 
-/* Form Container Headings and Text */
-.form-container h2 {
-    font-size: 1.75rem; /* Increased font size for emphasis */
-    color: white;
-    margin-bottom: 20px;
+.description-button {
+    margin: 0;
+    padding-left: 0px;
+    font-family: 'Orbitron', sans-serif;
+    max-width: 400px;
 }
 
-.form-container p {
-    font-size: 1rem;
-    color: white;
-    margin-bottom: 20px; /* Increased margin for better spacing */
+.description-button h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #ADD8E6;
 }
 
-/* Features Section */
-.features {
-    margin-top: 20px; /* Increased margin for separation */
+.description-button p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: silver;
+    text-align: justify;
 }
 
-.feature-item {
-    margin-bottom: 15px; /* Increased margin for better spacing */
+
+
+/* Media Query for Tablets (screens between 600px and 1024px) */
+@media (max-width: 1024px) {
+    body {
+        padding: 20px; /* Added padding around the body */
+    }
+
+    header {
+        font-size: 22px;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px; /* Added padding for spacing */
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .description-button {
+        max-width: 90%;
+    }
+
+    .description-button h2 {
+        font-size: 22px;
+    }
+
+    .description-button p {
+        font-size: 18px;
+    }
+
+    .description-button a {
+        width: 100%;
+        font-size: 14px;
+    }
 }
 
-.feature-item h3 {
-    font-size: 1.3rem; /* Increased font size for better readability */
-    color: white;
-    margin-bottom: 10px; /* Increased margin for better spacing */
+/* Media Query for Mobile Phones (screens below 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Added padding around the body */
+    }
+
+    header {
+        font-size: 18px;
+    }
+
+    main {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px; /* Added gap for spacing between elements */
+        padding: 10px; /* Added padding for mobile devices */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .description-button {
+        max-width: 100%;
+        padding-left: 5px;
+    }
+
+    .description-button h2 {
+        font-size: 20px;
+    }
+
+    .description-button p {
+        font-size: 16px;
+    }
+
+    .description-button a {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
 
-.feature-item p {
-    font-size: 1rem;
-    color: white;
-}
-
-/* CTA Button */
-.cta-button {
+.button-link {
     display: inline-block;
-    padding: 12px 24px; /* Increased padding for better appearance */
-    background: #2B84BF;
-    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ADD8E6;
+    color: black;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px; /* Increased font size for better readability */
-    transition: background 0.3s;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    width: 400px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.cta-button:hover {
-    background: #2B84BF;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content-container {
-        padding: 0 15px; /* Adjusted for better spacing */
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    .form-container h2 {
-        font-size: 1.5rem; /* Adjusted font size */
-    }
-
-    .form-container p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-btn {
-        font-size: 12px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    .form-container h2 {
-        font-size: 1.25rem; /* Adjusted font size */
-    }
-
-    .form-container p {
-        font-size: 0.85rem; /* Adjusted font size */
-    }
-
-    .cta-button {
-        font-size: 14px; /* Adjusted font size */
-    }
+.button-link:hover {
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
 }
