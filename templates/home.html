@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Space Sight</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="page-title">Spacesight</h1>
+  </header>
+  
+  <div class="cockpit">
+    <h2>Test Your Coordinates</h2>
+    <div class="panel">
+      <label for="x">X Coordinate:</label>
+      <input type="number" id="x" name="x">
+    </div>
+    <div class="panel">
+      <label for="y">Y Coordinate:</label>
+      <input type="number" id="y" name="y">
+    </div>
+    <div class="panel">
+      <label for="z">Z Coordinate:</label>
+      <input type="number" id="z" name="z">
+    </div>
+    <div class="panel">
+      <label for="vx">Velocity in X:</label>
+      <input type="number" id="vx" name="vx">
+    </div>
+    <div class="panel">
+      <label for="vy">Velocity in Y:</label>
+      <input type="number" id="vy" name="vy">
+    </div>
+    <div class="panel">
+      <label for="vz">Velocity in Z:</label>
+      <input type="number" id="vz" name="vz">
+    </div>
+    
+    <div class="button-container">
+      <button id="predict">Predict</button>
+    </div>
+    <!-- Error message container -->
+    <p id="error-message" style="color: orange; font-weight: bold; display: none; text-align: center;"></p>
+  </div>
+  
+  <div class="output-container">
+    <video id="result-video" width="500" height="300" autoplay loop style="display: none;"></video>
+    <!-- Collision status -->
+    <p id="collision-status" style="font-weight: bold; font-size: 18px; margin-top: 10px; text-align: center;"></p>
+  </div>
+  
+  <img id="normal-gif" src="Normal condition.gif" alt="Normal condition" width="400px" height="300" style="margin-left: 250px;">
+  <script src="home.js"></script>
+</body>
+</html>
