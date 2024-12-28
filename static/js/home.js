@@ -13,7 +13,7 @@ document.getElementById('prediction-form').addEventListener('submit', async func
   const response = await fetch('/predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ x, y, z, vx, vy, vz })
+    body: JSON.stringify({ x_sim: x, y_sim: y, z_sim: z, Vx_sim: vx, Vy_sim: vy, Vz_sim: vz })
   });
   const result = await response.json();
 
@@ -21,7 +21,7 @@ document.getElementById('prediction-form').addEventListener('submit', async func
   const formContainer = document.querySelector('.form-container');
   formContainer.innerHTML = `
     <video autoplay muted playsinline>
-      <source src="/static/img/${result.result === 1 ? 'collision' : 'no_collision'}.mp4" type="video/mp4">
+      <source src="/static/img/${result.prediction === 1 ? 'collision' : 'no_collision'}.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   `;
@@ -31,7 +31,7 @@ document.getElementById('prediction-form').addEventListener('submit', async func
   video.addEventListener('ended', () => {
     formContainer.innerHTML = `
       <h2 style="text-align: center;">
-        ${result.result === 1 ? 'Collision will occur!' : 'No collision detected.'}
+        ${result.result === "Collision will happen" ? 'Collision will occur!' : 'No collision detected.'}
       </h2>
     `;
   });
