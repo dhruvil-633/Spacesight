@@ -156,6 +156,90 @@ form h3 {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Match form's shadow */
 }
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .form-container {
+    width: 90%; /* Use almost full width on small screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .video-container {
+    width: 90%; /* Match form container width */
+  }
+
+  body {
+    font-size: 16px; /* Adjust font size for readability */
+  }
+
+  header {
+    font-size: 24px;
+  }
+}
+
+/* Small devices (tablets, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .form-container {
+    width: 75%;
+    padding: 18px;
+  }
+
+  .video-container {
+    width: 75%;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  header {
+    font-size: 26px;
+  }
+}
+
+/* Medium devices (desktop, 768px to 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .form-container {
+    width: 60%;
+  }
+
+  .video-container {
+    width: 60%;
+  }
+
+  body {
+    font-size: 20px;
+  }
+}
+
+/* Large devices (large desktops, 992px to 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .form-container {
+    width: 50%;
+  }
+
+  .video-container {
+    width: 50%;
+  }
+
+  body {
+    font-size: 22px;
+  }
+}
+
+/* Extra large devices (1200px and above) */
+@media (min-width: 1200px) {
+  .form-container {
+    width: var(--form-width); /* Default width for large screens */
+  }
+
+  .video-container {
+    width: var(--form-width);
+  }
+
+  body {
+    font-size: 24px;
+  }
+}
 
 
 
