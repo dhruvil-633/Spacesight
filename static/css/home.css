@@ -1,282 +1,119 @@
-/* Body with Starfield Background */
-*{
-    font-family: orbitron,sans-serif;
-}
 body {
     background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
-    display: flex; /* Enables flexbox layout */
-    justify-content: l; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100vh; /* Sets the height of the body to fill the viewport */
-    margin: 0; /* Removes default margin */
-    overflow: hidden; /* Prevents scrolling */
-    position: relative; /* For starfield positioning */
-}
-
-/* Starfield Effect */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 1; /* Ensures the stars are behind the form */
-    box-shadow: 
-        0 0 2px #fff,
-        10px 20px #fff,
-        20px 40px #fff,
-        -20px -30px #fff,
-        30px -50px #fff,
-        -50px -80px #fff,
-        60px 70px #fff,
-        -70px 90px #fff,
-        80px -100px #fff,
-        100px 150px #fff;
-    animation: twinkling 5s infinite ease-in-out;
-}
-
-/* Twinkling Stars Animation */
-@keyframes twinkling {
-    0%, 100% {
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
-/* Form Container */
-.cockpit {
-    width: 90%; /* Default width for small screens */
-    max-width: 400px; /* Limits the width on larger screens */
-    padding: 20px; /* Adjusts padding for readability */
-    border-radius: 15px; /* Adjusted to avoid extreme rounding */
-    background-color: transparent; /* transparent */
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glow */
-    position: relative; /* Keeps form on top of stars */
-    z-index: 2; /* Ensures the form is above the stars */
-    margin-left: 200px;
-    top: 45px;
-}
-
-/* Form Panels */
-.panel {
+    color: #ADD8E6;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Translucent background */
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  form h3 {
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Align labels and inputs */
-    gap: 10px; /* Adds spacing between label and input */
-}
-
-.panel label {
-    flex: 1; /* Ensures labels take appropriate space */
-    color: #fff;
-    font-weight: bold;
-    font-size: 1rem; /* Responsive font size */
-}
-
-/* Input Fields */
-input[type="number"] {
-    flex: 1; /* Ensures inputs take up the remaining space */
-    border: none; /* Removes borders */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    outline: none; /* Removes focus outline */
-    padding: 10px; /* Adjusts padding for comfortable input */
-    font-size: 1.2rem; /* Makes text more readable */
-    color: silver; /* Sets the font color to silver */
-    text-align: center; /* Centers the input text */
-    border-radius: 5px; /* Rounded corners for inputs */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adds glowing effect */
-}
-
-/* Button Styles */
-button {
-    background-color: #00ff00; /* Green */
-    color: #000;
+    color: #ADD8E6;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #E6BBAD;
+    font-size: large;
+  }
+  
+  .form-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ADD8E6;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-bottom: 2px solid #00FFFF;
+  }
+  
+  .form-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button-link {
+    background-color: #ADD8E6;
+    color: #000000;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem; /* Responsive font size */
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Green glow */
-}
-
-/* Button Container */
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-/* Responsive Adjustments */
-@media (min-width: 600px) {
-    .cockpit {
-        width: 50%; /* Increases width on medium screens */
-        padding: 30px;
-    }
-
-    .panel label {
-        font-size: 1.2rem; /* Increases font size on larger screens */
-    }
-
-    input[type="number"] {
-        padding: 12px; /* Increases padding for better usability */
-    }
-
-    button {
-        font-size: 1.2rem; /* Larger font size for better visibility */
-    }
-}
-
-@media (min-width: 1024px) {
-    .cockpit {
-        width: 30%; /* Further increases width on large screens */
-    }
-}
-.output-container {
-    margin-top: 20px;
-    text-align: center;
   }
   
-  #result-video {
-    max-width: 100%;
-    height: auto;
-    margin-left: 150px;
-  }
-  #collision-status {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 50px;
-  }
-  .page-title {
-    position: absolute; /* Allows precise placement */
-    top: 10px; /* Adjust distance from the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Aligns the element center to the center of the page */
-    text-align: center; /* Centers text within the heading */
-    font-size: 2rem; /* Adjust font size as needed */
-    color: white; /* Adjust color */
-}
-h1{
-    text-align: center;
-    color: #ADD8E6;
-}
-  #error-message {
-    color: orange;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    display: none; /* Hidden by default */
-  }
-  video::-webkit-media-controls {
-    display: none !important;
+  .button-link:hover {
+    background-color: #00FFFF;
   }
   
-  video::-moz-media-controls {
-    display: none !important;
+  .main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -42vw -4vh 0px 0px #fff, 25vw -41vh 0px 0px #fff, -20vw 49vh 0px 1px #fff, 
+      5vw 40vh 1px 1px #fff, 29vw 19vh 1px 0px #fff, -44vw -13vh 0px 0px #fff, 46vw 41vh 0px 1px #fff, 
+      -3vw -45vh 0px 1px #fff, 47vw 35vh 1px 0px #fff, 12vw -8vh 1px 0px #fff, -34vw 48vh 1px 1px #fff, 
+      32vw 26vh 1px 1px #fff, 32vw -41vh 1px 1px #fff, 0vw 37vh 1px 1px #fff, 34vw -26vh 1px 0px #fff, 
+      -14vw -49vh 1px 0px #fff, -12vw 45vh 0px 1px #fff, -44vw -33vh 0px 1px #fff, -13vw 41vh 0px 0px #fff, 
+      -36vw -11vh 0px 1px #fff, -23vw -24vh 1px 0px #fff, -38vw -27vh 0px 1px #fff, 16vw -19vh 0px 0px #fff, 
+      28vw 33vh 1px 0px #fff, -49vw -4vh 0px 0px #fff, 16vw 32vh 0px 1px #fff, 36vw -18vh 1px 0px #fff, 
+      -25vw -30vh 1px 0px #fff, -23vw 24vh 0px 1px #fff, -2vw -35vh 1px 1px #fff, -25vw 9vh 0px 0px #fff, 
+      -15vw -34vh 0px 0px #fff, -8vw -19vh 1px 0px #fff, -20vw -20vh 1px 1px #fff, 42vw 50vh 0px 1px #fff, 
+      -32vw 10vh 1px 0px #fff, -23vw -17vh 0px 0px #fff, 44vw 15vh 1px 0px #fff, -40vw 33vh 1px 1px #fff, 
+      -43vw 8vh 0px 0px #fff, -48vw -15vh 1px 1px #fff, -24vw 17vh 0px 0px #fff, -31vw 50vh 1px 0px #fff, 
+      36vw -38vh 0px 1px #fff, -7vw 48vh 0px 0px #fff, 15vw -32vh 0px 0px #fff, 29vw -41vh 0px 0px #fff, 
+      2vw 37vh 1px 0px #fff, 7vw -40vh 1px 1px #fff, 15vw 18vh 0px 0px #fff, 25vw -13vh 1px 1px #fff, 
+      -46vw -12vh 1px 1px #fff, -18vw 22vh 0px 0px #fff, 23vw -9vh 1px 0px #fff, 50vw 12vh 0px 1px #fff, 
+      45vw 2vh 0px 0px #fff, 14vw -48vh 1px 0px #fff, 23vw 43vh 0px 1px #fff, -40vw 16vh 1px 1px #fff, 
+      20vw -31vh 0px 1px #fff, -17vw 44vh 1px 1px #fff, 18vw -45vh 0px 0px #fff, 33vw -6vh 0px 0px #fff, 
+      0vw 7vh 0px 1px #fff, -10vw -18vh 0px 1px #fff, -19vw 5vh 1px 0px #fff, 1vw 42vh 0px 0px #fff, 
+      22vw 48vh 0px 1px #fff, 39vw -8vh 1px 1px #fff, -6vw -42vh 1px 0px #fff, -47vw 34vh 0px 0px #fff, 
+      -46vw 19vh 0px 1px #fff, -12vw -32vh 0px 0px #fff, -45vw -38vh 0px 1px #fff, -28vw 18vh 1px 0px #fff, 
+      -38vw -46vh 1px 1px #fff, 49vw -6vh 1px 1px #fff, -28vw 18vh 1px 1px #fff, 10vw -24vh 0px 1px #fff, 
+      -5vw -11vh 1px 1px #fff, 33vw -8vh 1px 0px #fff, -16vw 17vh 0px 0px #fff, 18vw 27vh 0px 1px #fff, 
+      -8vw -10vh 1px 1px #fff;
+    animation: zoom 16s alternate infinite;
   }
   
-  video::-ms-media-controls {
-    display: none !important;
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
   }
-  /* Responsive Media Queries */
-
-/* Mobile devices (phones) */
-@media (max-width: 599px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Space between elements */
-        height: 100vh; /* Full viewport height */
-        margin: 0;
-    }
-
-    .cockpit {
-        width: 90%; /* Adjust width for smaller screens */
-        padding: 15px; /* Slightly reduce padding */
-        margin: 0 auto;
-        top: 20px; /* Adjust position */
-    }
-
-    .panel label {
-        font-size: 0.9rem; /* Reduce label font size */
-    }
-
-    input[type="number"] {
-        font-size: 1rem; /* Adjust input font size */
-        padding: 8px; /* Reduce padding */
-    }
-
-    button {
-        font-size: 0.9rem; /* Adjust button font size */
-        padding: 8px 16px; /* Reduce button padding */
-    }
-
-    #result-video {
-        width: 100%; /* Make video responsive */
-        margin: 0 auto;
-    }
-
-    #collision-status {
-        font-size: 1.2rem; /* Slightly smaller font for status */
-        margin-top: 8px; /* Adjust margin */
-    }
-
-    .page-title {
-        font-size: 1.5rem; /* Reduce title size for mobile */
-        top: 5px; /* Adjust distance from the top */
-    }
-}
-
-/* Tablet devices */
-@media (min-width: 600px) and (max-width: 1023px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Space between elements */
-        height: 100vh;
-        margin: 0;
-    }
-
-    .cockpit {
-        width: 70%; /* Adjust width for tablets */
-        padding: 20px; /* Moderate padding */
-        margin: 0 auto;
-        top: 30px; /* Adjust top margin */
-    }
-
-    .panel label {
-        font-size: 1.1rem; /* Increase label font size slightly */
-    }
-
-    input[type="number"] {
-        font-size: 1.1rem; /* Adjust input font size */
-        padding: 10px; /* Moderate padding for inputs */
-    }
-
-    button {
-        font-size: 1rem; /* Slightly larger button font size */
-        padding: 10px 20px; /* Moderate padding for buttons */
-    }
-
-    #result-video {
-        width: 80%; /* Adjust video width */
-        margin: 0 auto;
-    }
-
-    #collision-status {
-        font-size: 1.4rem; /* Adjust font size for better readability */
-        margin-top: 10px; /* Adjust spacing */
-    }
-
-    .page-title {
-        font-size: 2rem; /* Slightly smaller title size */
-        top: 15px; /* Adjust top margin */
-    }
-}
+  

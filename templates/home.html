@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>SpaceSight</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SpaceSight is an advanced platform for satellite collision prediction and space debris tracking.">
+  <meta name="keywords" content="SpaceSight, satellite, space debris, collision prediction">
+  <meta name="author" content="Dhruvil Patel & Bhavik Jobanputra">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
-<!-- Favicon Link (Make sure the path is correct) -->
-<link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
+  <!-- Favicon Link (Ensure the path is correct) -->
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <title>SpaceSight</title>
 </head>
+
 <body>
+  <div class="main"></div>
   <header>
     <h1 class="page-title">SpaceSight</h1>
   </header>
-  
-  <div class="cockpit">
-    <h2>Test Your Coordinates</h2>
-    <div class="panel">
-      <label for="x">X Coordinate:</label>
-      <input type="number" id="x" name="x">
+  <main>
+    <div class="form-container">
+      <form action="">
+        <h3 style="text-align: center;">Test Your Coordinates</h3>
+        <div class="form-group">
+          <label for="x">Coordinates in X direction:</label>
+          <input type="number" name="x" id="x">
+        </div>
+        <div class="form-group">
+          <label for="y">Coordinates in Y direction:</label>
+          <input type="number" name="y" id="y">
+        </div>
+        <div class="form-group">
+          <label for="z">Coordinates in Z direction:</label>
+          <input type="number" name="z" id="z">
+        </div>
+        <div class="form-group">
+          <label for="vx">Velocity in X direction (Km/second):</label>
+          <input type="number" name="vx" id="vx">
+        </div>
+        <div class="form-group">
+          <label for="vy">Velocity in Y direction (Km/second):</label>
+          <input type="number" name="vy" id="vy">
+        </div>
+        <div class="form-group">
+          <label for="vz">Velocity in Z direction (Km/second):</label>
+          <input type="number" name="vz" id="vz">
+        </div>
+        <div class="form-button">
+          <button type="submit" class="button-link">Predict</button>
+        </div>
+      </form>
     </div>
-    <div class="panel">
-      <label for="y">Y Coordinate:</label>
-      <input type="number" id="y" name="y">
-    </div>
-    <div class="panel">
-      <label for="z">Z Coordinate:</label>
-      <input type="number" id="z" name="z">
-    </div>
-    <div class="panel">
-      <label for="vx">Velocity in X:</label>
-      <input type="number" id="vx" name="vx">
-    </div>
-    <div class="panel">
-      <label for="vy">Velocity in Y:</label>
-      <input type="number" id="vy" name="vy">
-    </div>
-    <div class="panel">
-      <label for="vz">Velocity in Z:</label>
-      <input type="number" id="vz" name="vz">
-    </div>
-    
-    <div class="button-container">
-      <button id="predict">Predict</button>
-    </div>
-    <!-- Error message container -->
-    <p id="error-message" style="color: orange; font-weight: bold; display: none; text-align: center;"></p>
-  </div>
-  
-  <div class="output-container">
-    <video id="result-video" width="500" height="300" autoplay loop style="display: none;"></video>
-    <!-- Collision status -->
-    <p id="collision-status" style="font-weight: bold; font-size: 18px; margin-top: 10px; text-align: center;"></p>
-  </div>
-  
-  <img id="normal-gif" src="Normal condition.gif" alt="Normal condition" width="400px" height="300" style="margin-left: 250px;">
-  <script src="home.js"></script>
+  </main>
 </body>
+
 </html>
