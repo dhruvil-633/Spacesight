@@ -20,9 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const result = await response.json();
 
-      // Replace form-container content with the appropriate video
+      // Update the form container content
       const formContainer = document.querySelector('.form-container');
       formContainer.innerHTML = `
+        <div class="result-container">
+          <h2 style="text-align: center; color: #ADD8E6;">
+            ${result.result === "Collision will happen" ? 'Collision will occur!' : 'No collision detected.'}
+          </h2>
+        </div>
         <div class="video-container">
           <video autoplay muted playsinline>
             <source src="/static/img/${result.prediction === 1 ? 'collision' : 'no_collision'}.mp4" type="video/mp4">
@@ -30,18 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
           </video>
         </div>
       `;
-
-      // Show result after the video finishes
-      const video = formContainer.querySelector('video');
-      video.addEventListener('ended', () => {
-        formContainer.innerHTML = `
-          <div class="result-container">
-            <h2 style="text-align: center;">
-              ${result.result === "Collision will happen" ? 'Collision will occur!' : 'No collision detected.'}
-            </h2>
-          </div>
-        `;
-      });
     } catch (error) {
       console.error('Error during prediction:', error);
     }
