@@ -13,10 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
-  <!-- Favicon Link (Ensure the path is correct) -->
+  <!-- Favicon Link -->
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
-
   <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
   <title>SpaceSight</title>
 </head>
 
@@ -27,31 +27,31 @@
   </header>
   <main>
     <div class="form-container">
-      <form action="">
+      <form id="prediction-form">
         <h3 style="text-align: center;">Test Your Coordinates</h3>
         <div class="form-group">
           <label for="x">Coordinates in X direction:</label>
-          <input type="number" name="x" id="x">
+          <input type="number" name="x" id="x" required>
         </div>
         <div class="form-group">
           <label for="y">Coordinates in Y direction:</label>
-          <input type="number" name="y" id="y">
+          <input type="number" name="y" id="y" required>
         </div>
         <div class="form-group">
           <label for="z">Coordinates in Z direction:</label>
-          <input type="number" name="z" id="z">
+          <input type="number" name="z" id="z" required>
         </div>
         <div class="form-group">
           <label for="vx">Velocity in X direction (Km/second):</label>
-          <input type="number" name="vx" id="vx">
+          <input type="number" name="vx" id="vx" required>
         </div>
         <div class="form-group">
           <label for="vy">Velocity in Y direction (Km/second):</label>
-          <input type="number" name="vy" id="vy">
+          <input type="number" name="vy" id="vy" required>
         </div>
         <div class="form-group">
           <label for="vz">Velocity in Z direction (Km/second):</label>
-          <input type="number" name="vz" id="vz">
+          <input type="number" name="vz" id="vz" required>
         </div>
         <div class="form-button">
           <button type="submit" class="button-link">Predict</button>
@@ -59,6 +59,7 @@
       </form>
     </div>
   </main>
+  <script src=""></script>
 </body>
 
 </html>
