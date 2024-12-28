@@ -1,89 +1,91 @@
 body {
-    background-color: #000;
-    color: #ADD8E6;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    text-align: center;
-    font-size: 30px;
-    margin-top: 20px;
-  }
-  
-  .form-container {
-    background-color: rgba(255, 255, 255, 0.1); /* Translucent background */
-    padding: 20px;
-    margin: 50px auto;
-    border-radius: 10px;
-    width: 50%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  }
-  
-  form h3 {
-    margin-bottom: 20px;
-    color: #ADD8E6;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #E6BBAD;
-    font-size: large;
-  }
-  
-  .form-group input {
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #ADD8E6;
-    background: transparent;
-    color: #FFFFFF;
-    font-size: 16px;
-    padding: 5px 0;
-    text-align: center;
-  }
-  
-  .form-group input:focus {
-    outline: none;
-    border-bottom: 2px solid #00FFFF;
-  }
-  
-  .form-button {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .button-link {
-    background-color: #ADD8E6;
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .button-link:hover {
-    background-color: #00FFFF;
-  }
-  
-  .main {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    height: 1px;
-    width: 1px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: -42vw -4vh 0px 0px #fff, 25vw -41vh 0px 0px #fff, -20vw 49vh 0px 1px #fff, 
+  background-color: #000;
+  color: #ADD8E6;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1); /* Translucent background */
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2; /* Ensures the form is above the video */
+}
+
+form h3 {
+  margin-bottom: 20px;
+  color: #ADD8E6;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #E6BBAD;
+  font-size: large;
+}
+
+.form-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ADD8E6;
+  background: transparent;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-bottom: 2px solid #00FFFF;
+}
+
+.form-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-link {
+  background-color: #ADD8E6;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-link:hover {
+  background-color: #00FFFF;
+}
+
+.main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: -42vw -4vh 0px 0px #fff, 25vw -41vh 0px 0px #fff, -20vw 49vh 0px 1px #fff, 
       5vw 40vh 1px 1px #fff, 29vw 19vh 1px 0px #fff, -44vw -13vh 0px 0px #fff, 46vw 41vh 0px 1px #fff, 
       -3vw -45vh 0px 1px #fff, 47vw 35vh 1px 0px #fff, 12vw -8vh 1px 0px #fff, -34vw 48vh 1px 1px #fff, 
       32vw 26vh 1px 1px #fff, 32vw -41vh 1px 1px #fff, 0vw 37vh 1px 1px #fff, 34vw -26vh 1px 0px #fff, 
@@ -105,15 +107,139 @@ body {
       -38vw -46vh 1px 1px #fff, 49vw -6vh 1px 1px #fff, -28vw 18vh 1px 1px #fff, 10vw -24vh 0px 1px #fff, 
       -5vw -11vh 1px 1px #fff, 33vw -8vh 1px 0px #fff, -16vw 17vh 0px 0px #fff, 18vw 27vh 0px 1px #fff, 
       -8vw -10vh 1px 1px #fff;
-    animation: zoom 16s alternate infinite;
-  }
-  
-  @keyframes zoom {
-    0% {
+  animation: zoom 16s alternate infinite;
+}
+
+@keyframes zoom {
+  0% {
       transform: scale(1);
-    }
-    100% {
-      transform: scale(1.5);
-    }
   }
-  
+  100% {
+      transform: scale(1.5);
+  }
+}
+
+:root {
+  --form-width: 50%; /* Set form container width */
+  --form-max-width: 500px; /* Maximum form width */
+}
+
+.video-container {
+  position: absolute;
+  top: 290%;
+  left: 50%;
+  width: var(--form-width); /* Dynamically match the form width */
+  max-width: var(--form-max-width); /* Match form's max width */
+  height: auto; /* Match form container's height dynamically */
+  z-index: 1; /* Ensure video stays behind the form */
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  border-radius: 10px; /* Match form's rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Consistent shadow for the video */
+}
+
+.video-container video {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio of the video */
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+  object-position: center; /* Center the video content */
+}
+
+.form-container {
+  position: relative;
+  z-index: 2; /* Form stays on top of the video */
+  width: var(--form-width); /* Match the root width variable */
+  max-width: var(--form-max-width); /* Match the root max-width variable */
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Translucent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Match form's shadow */
+}
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .form-container {
+    width: 90%; /* Use almost full width on small screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .video-container {
+    width: 90%; /* Match form container width */
+  }
+
+  body {
+    font-size: 16px; /* Adjust font size for readability */
+  }
+
+  header {
+    font-size: 24px;
+  }
+}
+
+/* Small devices (tablets, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .form-container {
+    width: 75%;
+    padding: 18px;
+  }
+
+  .video-container {
+    width: 75%;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  header {
+    font-size: 26px;
+  }
+}
+
+/* Medium devices (desktop, 768px to 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .form-container {
+    width: 60%;
+  }
+
+  .video-container {
+    width: 60%;
+  }
+
+  body {
+    font-size: 20px;
+  }
+}
+
+/* Large devices (large desktops, 992px to 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .form-container {
+    width: 50%;
+  }
+
+  .video-container {
+    width: 50%;
+  }
+
+  body {
+    font-size: 22px;
+  }
+}
+
+/* Extra large devices (1200px and above) */
+@media (min-width: 1200px) {
+  .form-container {
+    width: var(--form-width); /* Default width for large screens */
+  }
+
+  .video-container {
+    width: var(--form-width);
+  }
+
+  body {
+    font-size: 24px;
+  }
+}
+
+
+
